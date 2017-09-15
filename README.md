@@ -1,6 +1,6 @@
 # Long-term balancing selection contributes to adaptation in Arabidopsis and its relatives
 
-All the scripts are written in Perl. To run them, you have to install Perl, which can be downloaded from https://www.perl.org/, and make sure all relevant modules are installed as well. Meantime, in each script, the specific settings need to be modified accordingly, such as the path to the relevant files etc.
+`All` the scripts are written in Perl. To run them, you have to install Perl, which can be downloaded from https://www.perl.org/, and make sure all relevant modules are installed as well. Meantime, in each script, the specific settings need to be modified accordingly, such as the path to the relevant files etc.
 
 The scripts are authored by Qiong Wu, State Key Laboratory of Systematic and Evolutionary Botany, Institute of Botany, Chinese Academy of Science. They are functionally organized in directories as described below.
 
