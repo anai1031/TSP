@@ -5,7 +5,7 @@ All the scripts are written in Perl. To run them, you have to install Perl, whic
 The scripts are authored by Qiong Wu, State Key Laboratory of Systematic and Evolutionary Botany, Institute of Botany, Chinese Academy of Science. They are functionally organized in directories as described below.
 
 Shared SNPs identification
----
+===
 *	**matrix-CDS.pl**: extract the coding sequences of an orthologue of all the samples under study; similar work can be done for sequences in genic region. The Ath SNPs are in a matrix and the Cru SNPs are in .vcf files. The reference genome and the GFF annotation files have to be specified for each species in the script. <br> 
 
 **Usage**: `perl matrix-CDS.pl <sql file> <Start file number>`<br>
@@ -51,6 +51,7 @@ Simulation analysis
 **Usage**: `perl simuPi.pl`<br>
 
 *	**simuMAF.pl**: calculates the MAF for all the SNPs appearing in the simulated segments for Ath and Cru separately.<br>
+
 **Usage**: `perl simuPi.pl`<br>
 
 **Dependency**: `Before applying these two scripts, we generated 1,000,000 simulated 100 bp neutral sequences for all the samples under the inferred demographic model using fastsimcoal2.`<br>
