@@ -7,8 +7,8 @@ The scripts are authored by Qiong Wu, State Key Laboratory of Systematic and Evo
 Shared SNPs identification
 ---
 *	**matrix-CDS.pl**: extract the coding sequences of an orthologue of all the samples under study; similar work can be done for sequences in genic region. The Ath SNPs are in a matrix and the Cru SNPs are in .vcf files. The reference genome and the GFF annotation files have to be specified for each species in the script. <br> 
-`Usage: perl matrix-CDS.pl <sql file> <Start file number> <br>
-Required: <br>
+`Usage: perl matrix-CDS.pl <sql file> <Start file number> <br>`
+`Required: <br>
 <sql file>: this is the output file from InParanoid v2.0, with each line listing one specific orthologue for each species, based on their respective GFF annotations. Example lines are listed below:<br>
   
 Aly	871508|PACid:16052529	Ath	AT3G02260.1|PACid:19661360	Cru	Carubv10016453m|PACid:20899174<br>
