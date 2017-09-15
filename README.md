@@ -10,8 +10,10 @@ Shared SNPs identification
 Usage: perl matrix-CDS.pl <sql file> <Start file number>
 Required: 
 <sql file>: this is the output file from InParanoid v2.0, with each line listing one specific orthologue for each species, based on their respective GFF annotations. Example lines are listed below:
+  
 Aly	871508|PACid:16052529	Ath	AT3G02260.1|PACid:19661360	Cru	Carubv10016453m|PACid:20899174
 Aly	489168|PACid:16049759	Ath	AT5G23110.1|PACid:19671139	Cru	Carubv10000018m|PACid:20908653
+
 <Start file number>: Since there are around 16,000 orthologues, to run in parallel, the sql file was separated into small files in order, containing, e.g., 1-1000,1001-2000, 2001-3000, etc. orthologues. The start number has to be applied to keep consistent with the order in the whole list. 
 Dependency: Before applying this script, you need to run InParanoid to get the orthologue information of different species.
 
