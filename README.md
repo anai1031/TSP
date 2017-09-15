@@ -6,7 +6,7 @@ The scripts are authored by Qiong Wu, State Key Laboratory of Systematic and Evo
 
 Shared SNPs identification
 ---
-*	matrix-CDS.pl: extract the coding sequences of an orthologue of all the samples under study; similar work can be done for sequences in genic region. The Ath SNPs are in a matrix and the Cru SNPs are in .vcf files. The reference genome and the GFF annotation files have to be specified for each species in the script. <br> 
+*	**matrix-CDS.pl**: extract the coding sequences of an orthologue of all the samples under study; similar work can be done for sequences in genic region. The Ath SNPs are in a matrix and the Cru SNPs are in .vcf files. The reference genome and the GFF annotation files have to be specified for each species in the script. <br> 
 Usage: perl matrix-CDS.pl <sql file> <Start file number>
 Required: 
 `<sql file>`: this is the output file from InParanoid v2.0, with each line listing one specific orthologue for each species, based on their respective GFF annotations. Example lines are listed below:
@@ -23,26 +23,26 @@ Dependency: Before applying this script, you need to have all the sequences for 
 
 Demographic inference
 ---
-*	extract-4fold-tsp.pl: automatically extract the orthologous 4-fold sites from the exiting aligned fasta files. The output of this procedure is all the matrices containing the 4-fold degenerate sites of each orthologue.
+*	**extract-4fold-tsp.pl**: automatically extract the orthologous 4-fold sites from the exiting aligned fasta files. The output of this procedure is all the matrices containing the 4-fold degenerate sites of each orthologue.
 Usage: perl extract-4fold-tsp.pl
 Dependency: Before applying this script, you need to have the orthologous sequences from different species aligned using PHYLIP and converted into fasta format.
 
-*	computeSFS.pl: automatically computes the Site Frequency Spectrum (MAF) of the two populations from all of the 4-fold degenerate sites. The output of this procedure is the SFS to feed into the fastsimcoal software, for both the joint and Multi versions. 
+*	**computeSFS.pl**: automatically computes the Site Frequency Spectrum (MAF) of the two populations from all of the 4-fold degenerate sites. The output of this procedure is the SFS to feed into the fastsimcoal software, for both the joint and Multi versions. 
 Usage: perl computeSFS.pl
 Dependency: Before applying this script, you need to have all the matrices of the 4-fold degenerate sites for each orthologue.
 
 Tree analysis
 ---
-*	allelicTree.pl: automatically scan all the 100 bp windows covering each shared SNP in the genic region of the candidate genes and check whether all the samples of both Ath and Cru in the given tree can be clustered into a separate group, respectively. If not, this tree is not a species tree and can be an allelic tree, then further check will be done to see if there are 2 or more shared SNPs in such window to meet the searching criterion described in the paper. All the qualifying trees will be checked manually to confirm to be an allelic tree. The output is a file recording the information of each qualifying tree.
+*	**allelicTree.pl**: automatically scan all the 100 bp windows covering each shared SNP in the genic region of the candidate genes and check whether all the samples of both Ath and Cru in the given tree can be clustered into a separate group, respectively. If not, this tree is not a species tree and can be an allelic tree, then further check will be done to see if there are 2 or more shared SNPs in such window to meet the searching criterion described in the paper. All the qualifying trees will be checked manually to confirm to be an allelic tree. The output is a file recording the information of each qualifying tree.
 Usage: perl allelicTree.pl
 Dependency: Before applying this script, you need to build phylogenetic trees for all the 100 bp windows covering each shared SNP in the genic region of the candidate genes and the trees need to be in Newick format.
 
 Simulation analysis
 ---
-*	simuPi.pl: calculates Pi for every simulated 100 bp segment for Ath and Cru separately.
+*	**simuPi.pl**: calculates Pi for every simulated 100 bp segment for Ath and Cru separately.
 Usage: perl simuPi.pl
 
-*	simuMAF.pl: calculates the MAF for all the SNPs appearing in the simulated segments for Ath and Cru separately.
+*	**simuMAF.pl**: calculates the MAF for all the SNPs appearing in the simulated segments for Ath and Cru separately.
 Usage: perl simuPi.pl
 
 Dependency: Before applying these two scripts, we generated 1,000,000 simulated 100 bp neutral sequences for all the samples under the inferred demographic model using fastsimcoal2.
