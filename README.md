@@ -25,7 +25,7 @@ Shared SNPs identification
 **Dependency**: `Before applying this script, you need to have all the sequences for each orthologue aligned using PHYLIP.`<br>
 
 Demographic inference
----
+===
 *	**extract-4fold-tsp.pl**: automatically extract the orthologous 4-fold sites from the exiting aligned fasta files. The output of this procedure is all the matrices containing the 4-fold degenerate sites of each orthologue.<br>
 
 **Usage**: `perl extract-4fold-tsp.pl`<br>
@@ -38,14 +38,14 @@ Demographic inference
 **Dependency**: `Before applying this script, you need to have all the matrices of the 4-fold degenerate sites for each orthologue.`<br>
 
 Tree analysis
----
+===
 *	**allelicTree.pl**: automatically scan all the 100 bp windows covering each shared SNP in the genic region of the candidate genes and check whether all the samples of both Ath and Cru in the given tree can be clustered into a separate group, respectively. If not, this tree is not a species tree and can be an allelic tree, then further check will be done to see if there are 2 or more shared SNPs in such window to meet the searching criterion described in the paper. All the qualifying trees will be checked manually to confirm to be an allelic tree. The output is a file recording the information of each qualifying tree.<br>
 
 **Usage**: `perl allelicTree.pl`<br>
 **Dependency**: `Before applying this script, you need to build phylogenetic trees for all the 100 bp windows covering each shared SNP in the genic region of the candidate genes and the trees need to be in Newick format.`<br>
 
 Simulation analysis
----
+===
 *	**simuPi.pl**: calculates Pi for every simulated 100 bp segment for Ath and Cru separately.<br>
 
 **Usage**: `perl simuPi.pl`<br>
