@@ -14,8 +14,8 @@ Shared SNPs identification
     Aly	871508|PACid:16052529	Ath	AT3G02260.1|PACid:19661360	Cru	Carubv10016453m|PACid:20899174<br>
     Aly	489168|PACid:16049759	Ath	AT5G23110.1|PACid:19671139	Cru	Carubv10000018m|PACid:20908653<br>
 
-`<Start file number>: Since there are around 16,000 orthologues, to run in parallel, the sql file was separated into small files in order, containing, e.g., 1-1000,1001-2000, 2001-3000, etc. orthologues. The start number has to be applied to keep consistent with the order in the whole list. <br>
-Dependency: Before applying this script, you need to run InParanoid to get the orthologue information of different species.`<br>
+`<Start file number>: Since there are around 16,000 orthologues, to run in parallel, the sql file was separated into small files in order, containing, e.g., 1-1000,1001-2000, 2001-3000, etc. orthologues. The start number has to be applied to keep consistent with the order in the whole list.` <br>
+`Dependency: Before applying this script, you need to run InParanoid to get the orthologue information of different species.`<br>
 
 *	**shSNP.pl**: look for the orthologous shared bi-allelic SNPs between A.th and C.ru, requiring both SNPs with MAF > 0.05; This script automatically scans the aligned sequence (output from MUSCLE v3.8.31) for each orthologue. The output of this procedure is a list of all the shared SNPs and their respective allele frequency in each species.<br>
 Usage: perl shSNP.pl<br>
