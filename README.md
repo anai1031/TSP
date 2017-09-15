@@ -25,7 +25,7 @@ Shared SNPs identification
 **Dependency**: `Before applying this script, you need to have all the sequences for each orthologue aligned using PHYLIP.`<br>
 
 Demographic inference
-****
+---
 *	**extract-4fold-tsp.pl**: automatically extract the orthologous 4-fold sites from the exiting aligned fasta files. The output of this procedure is all the matrices containing the 4-fold degenerate sites of each orthologue.<br>
 
 **Usage**: `perl extract-4fold-tsp.pl`<br>
