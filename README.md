@@ -1,10 +1,10 @@
 # Long-term balancing selection contributes to adaptation in Arabidopsis and its relatives
-===
+
 All the scripts are written in Perl. To run them, you have to install Perl, which can be downloaded from https://www.perl.org/, and make sure all relevant modules are installed as well. Meantime, in each script, the specific settings need to be modified accordingly, such as the path to the relevant files etc.
 
 The scripts are authored by Qiong Wu, State Key Laboratory of Systematic and Evolutionary Botany, Institute of Botany, Chinese Academy of Science. They are functionally organized in directories as described below.
 
-##Shared SNPs identification
+Shared SNPs identification
 ---
 •	matrix-CDS.pl: extract the coding sequences of an orthologue of all the samples under study; similar work can be done for sequences in genic region. The Ath SNPs are in a matrix and the Cru SNPs are in .vcf files. The reference genome and the GFF annotation files have to be specified for each species in the script. 
 Usage: perl matrix-CDS.pl <sql file> <Start file number>
@@ -19,7 +19,7 @@ Dependency: Before applying this script, you need to run InParanoid to get the o
 Usage: perl shSNP.pl
 Dependency: Before applying this script, you need to have all the sequences for each orthologue aligned using PHYLIP.
 
-##Demographic inference
+Demographic inference
 ---
 •	extract-4fold-tsp.pl: automatically extract the orthologous 4-fold sites from the exiting aligned fasta files. The output of this procedure is all the matrices containing the 4-fold degenerate sites of each orthologue.
 Usage: perl extract-4fold-tsp.pl
@@ -29,13 +29,13 @@ Dependency: Before applying this script, you need to have the orthologous sequen
 Usage: perl computeSFS.pl
 Dependency: Before applying this script, you need to have all the matrices of the 4-fold degenerate sites for each orthologue.
 
-##Tree analysis
+Tree analysis
 ---
 •	allelicTree.pl: automatically scan all the 100 bp windows covering each shared SNP in the genic region of the candidate genes and check whether all the samples of both Ath and Cru in the given tree can be clustered into a separate group, respectively. If not, this tree is not a species tree and can be an allelic tree, then further check will be done to see if there are 2 or more shared SNPs in such window to meet the searching criterion described in the paper. All the qualifying trees will be checked manually to confirm to be an allelic tree. The output is a file recording the information of each qualifying tree.
 Usage: perl allelicTree.pl
 Dependency: Before applying this script, you need to build phylogenetic trees for all the 100 bp windows covering each shared SNP in the genic region of the candidate genes and the trees need to be in Newick format.
 
-##Simulation analysis
+Simulation analysis
 ---
 •	simuPi.pl: calculates Pi for every simulated 100 bp segment for Ath and Cru separately.
 Usage: perl simuPi.pl
